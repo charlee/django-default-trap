@@ -6,12 +6,12 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         book1 = Book(name='Book 1')
-        print('book1.author = %s' % book1.detail.get('author'))
+        print('book1.detail.author = %s' % book1.detail.get('author'))
         book1.detail['author'] = 'Steven'
-        print('book1.author = %s' % book1.detail.get('author'))
+        print('book1.detail.author = %s' % book1.detail.get('author'))
         book1.save()
         print('book1 saved.')
 
         book2 = Book(name='Book 2')
-        print('book2.author = %s' % book2.detail.get('author'))
+        print('book2.detail.author = %s' % book2.detail.get('author'))
         book2.save()
